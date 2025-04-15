@@ -10,7 +10,7 @@ Această aplicație conectează pacienții cu clinici și medici printr-o platfo
 
 -filtrare avansată (preț, distanță, tip consultație, rating etc.)
 
--acces rapid la servicii compatibile cu asigurările private,
+-acces rapid la servicii compatibile cu asigurările private
 
 -articole de educație medicală verificate.
 
