@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platformă Medicală Inteligentă</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .filter-active {
+      background-color: #10b981;
+      color: white;
+    }
+    .clinic-card {
+      transition: transform 0.3s ease;
+    }
+    .clinic-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-emerald-600 text-white py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">MedicLine</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#home" class="hover:underline">Acasă</a></li>
+          <li><a href="#consult" class="hover:underline">Consult</a></li>
+          <li><a href="#clinics" class="hover:underline">Clinici</a></li>
+          <li><a href="#articles" class="hover:underline">Articole</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-emerald-50 py-16">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-4xl font-bold mb-4">Îngrijire medicală la un click distanță</h2>
+      <p class="text-lg mb-8">Conectăm pacienții cu medici și clinici printr-o platformă simplă și inteligentă.</p>
+      <button class="bg-emerald-600 text-white px-6 py-3 rounded-full hover:bg-emerald-700">Programează un consult</button>
+    </div>
+  </section>
+
+  <!-- Consult Section -->
+  <section id="consult" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Consult inițial online</h2>
+      <div class="flex justify-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-md text-center">
+          <h3 class="text-xl font-semibold mb-4">Vorbește cu un medic acum</h3>
+          <p class="mb-4">Programează un consult video rapid și securizat direct în aplicație.</p>
+          <button class="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">Începe consultul</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clinici Section -->
+  <section id="clinics" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Găsește clinici și medici</h2>
+      
+      <!-- Filters -->
+      <div class="mb-8 flex flex-wrap gap-4 justify-center">
+        <select id="specialtyFilter" class="border p-2 rounded">
+          <option value="">Toate specialitățile</option>
+          <option value="cardiologie">Cardiologie</option>
+          <option value="dermatologie">Dermatologie</option>
+          <option value="pediatrie">Pediatrie</option>
+        </select>
+        <input id="priceFilter" type="number" placeholder="Preț maxim (RON)" class="border p-2 rounded">
+        <input id="distanceFilter" type="number" placeholder="Distanță maximă (km)" class="border p-2 rounded">
+        <select id="ratingFilter" class="border p-2 rounded">
+          <option value="">Orice rating</option>
+          <option value="4">4+ stele</option>
+          <option value="3">3+ stele</option>
+        </select>
+        <button id="applyFilters" class="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">Aplică filtre</button>
+      </div>
+
+      <!-- Clinici Lista -->
+      <div id="clinicsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- aici urmeaza javascript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles Section -->
+  <section id="articles" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Articole medicale verificate</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Cum să îți menții inima sănătoasă</h3>
+          <p class="mb-4">Sfaturi practice pentru o viață sănătoasă, verificate de experți.</p>
+          <a href="#" class="text-emerald-600 hover:underline">Citește mai mult</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Importanța screening-ului dermatologic</h3>
+          <p class="mb-4">Află de ce controalele regulate sunt esențiale.</p>
+          <a href="#" class="text-emerald-600 hover:underline">Citește mai mult</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Ghid pentru părinți: Vaccinările copiilor</h3>
+          <p class="mb-4">Tot ce trebuie să știi despre vaccinurile esențiale.</p>
+          <a href="#" class="text-emerald-600 hover:underline">Citește mai mult</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-emerald-600 text-white py-8">
+    <div class="container mx-auto text-center px-4">
+      <p>© 2025 MedicLine. Toate drepturile rezervate.</p>
+    </div>
+  </footer>
+
+  <script>
+   
+    const clinics = [
+      { id: 1, name: "Clinica CardioVita", specialty: "cardiologie", price: 200, distance: 5, rating: 4.5, insurance: true },
+      { id: 2, name: "DermaPlus", specialty: "dermatologie", price: 150, distance: 3, rating: 4.0, insurance: false },
+      { id: 3, name: "PediaCare", specialty: "pediatrie", price: 180, distance: 7, rating: 3.8, insurance: true },
+    ];
+
+    
+    function renderClinics(filteredClinics) {
+      const clinicsList = document.getElementById('clinicsList');
+      clinicsList.innerHTML = '';
+      filteredClinics.forEach(clinic => {
+        const clinicCard = `
+          <div class="clinic-card bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-2">${clinic.name}</h3>
+            <p class="mb-2"><strong>Specialitate:</strong> ${clinic.specialty}</p>
+            <p class="mb-2"><strong>Preț:</strong> ${clinic.price} RON</p>
+            <p class="mb-2"><strong>Distanță:</strong> ${clinic.distance} km</p>
+            <p class="mb-2"><strong>Rating:</strong> ${clinic.rating} ⭐</p>
+            <p class="mb-4"><strong>Asigurare:</strong> ${clinic.insurance ? 'Da' : 'Nu'}</p>
+            <button class="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700" onclick="scheduleAppointment(${clinic.id})">Programează</button>
+          </div>
+        `;
+        clinicsList.innerHTML += clinicCard;
+      });
+    }
+
+
+    renderClinics(clinics);
+
+    
+    document.getElementById('applyFilters').addEventListener('click', () => {
+      const specialty = document.getElementById('specialtyFilter').value;
+      const price = parseInt(document.getElementById('priceFilter').value) || Infinity;
+      const distance = parseInt(document.getElementById('distanceFilter').value) || Infinity;
+      const rating = parseFloat(document.getElementById('ratingFilter').value) || 0;
+
+      const filteredClinics = clinics.filter(clinic => {
+        return (!specialty || clinic.specialty === specialty) &&
+               clinic.price <= price &&
+               clinic.distance <= distance &&
+               clinic.rating >= rating;
+      });
+
+      renderClinics(filteredClinics);
+    });
+
+    function scheduleAppointment(clinicId) {
+      alert(`Programare inițiată pentru clinica cu ID: ${clinicId}. Vei fi redirecționat către calendar.`);
+      // Aici ar fi integrarea cu un calendar real
+    }
+  </script>
+</body>
+</html>
