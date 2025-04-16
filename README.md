@@ -1,6 +1,6 @@
 Această aplicație conectează pacienții cu clinici și medici printr-o platformă inteligentă, care oferă:
 
--consult inițial cu medic direct în aplicație
+-consult inițial cu  un medic direct în aplicație
 
 -recomandări automate de specialiști
 
