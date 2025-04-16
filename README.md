@@ -1,4 +1,4 @@
-Această aplicație conectează pacienții cu clinici și medici printr-o platformă inteligentă, care oferă:
+Această aplicație web conectează pacienții cu clinici și medici printr-o platformă inteligentă, care oferă:
 
 -consult inițial cu  un medic direct în aplicație
 
