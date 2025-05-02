@@ -1,0 +1,10 @@
+services:
+  medicline:
+    image: medicline
+    build:
+      context: medic-line
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
