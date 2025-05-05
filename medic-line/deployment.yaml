@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: medicline-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: medicline
+  template:
+    metadata:
+      labels:
+        app: medicline
+    spec:
+      containers:
+      - name: medicline-container
+        image: medicline:latest
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: medicline-service
+spec:
+  selector:
+    app: medicline
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+  type: LoadBalancer

@@ -1,10 +1,19 @@
-FROM node:lts-alpine
-ENV NODE_ENV=production
-WORKDIR /usr/src/app
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm install --production --silent && mv node_modules ../
+FROM node:16
+
+
+WORKDIR /app
+
+# Copiem fișierele necesare
+COPY package*.json ./
+
+# Instalăm dependențele
+RUN npm install
+
+# Copiem restul aplicației
 COPY . .
+
+# Expunem portul pe care rulează aplicația
 EXPOSE 3000
-RUN chown -R node /usr/src/app
-USER node
+
+# Comanda de start a aplicației
 CMD ["npm", "start"]
