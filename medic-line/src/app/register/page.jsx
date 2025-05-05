@@ -10,20 +10,36 @@ export default function RegisterPage() {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (data) => {
-        console.log("Register:", data);
+    const onSubmit = async (data) => {
+        try {
+            const response = await fetch("http://localhost:8080/auth/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    username: data.email,
+                    password: data.password,
+                    email: data.email,
+                }),
+            });
+
+            if (response.ok) {
+                alert("Cont creat cu succes! Mergi la autentificare.");
+                window.location.href = "/login";
+            } else {
+                const errorMsg = await response.text();
+                alert("Eroare la înregistrare: " + errorMsg);
+            }
+        } catch (error) {
+            alert("Eroare rețea: " + error.message);
+        }
     };
 
     return (
         <div className="container">
             <h1>Creare Cont</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div>
-                    <label>Nume complet</label>
-                    <input {...register("name", { required: "Numele este obligatoriu" })} />
-                    {errors.name && <p className="error">{errors.name.message}</p>}
-                </div>
-
                 <div>
                     <label>Email</label>
                     <input
@@ -47,7 +63,7 @@ export default function RegisterPage() {
                             required: "Parola este obligatorie",
                             minLength: {
                                 value: 6,
-                                message: "Parola trebuie să aiba cel puțin 6 caractere",
+                                message: "Parola trebuie să aibă cel puțin 6 caractere",
                             },
                         })}
                     />
@@ -55,7 +71,7 @@ export default function RegisterPage() {
                 </div>
 
                 <div>
-                    <label>Confirmare parola</label>
+                    <label>Confirmare parolă</label>
                     <input
                         type="password"
                         {...register("confirmPassword", {
@@ -64,10 +80,12 @@ export default function RegisterPage() {
                                 value === watch("password") || "Parolele nu coincid",
                         })}
                     />
-                    {errors.confirmPassword && <p className="error">{errors.confirmPassword.message}</p>}
+                    {errors.confirmPassword && (
+                        <p className="error">{errors.confirmPassword.message}</p>
+                    )}
                 </div>
 
-                <button type="submit">Inregistreaza-te</button>
+                <button type="submit">Înregistrează-te</button>
             </form>
         </div>
     );
