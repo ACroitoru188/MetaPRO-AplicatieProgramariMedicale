@@ -1,5 +1,5 @@
 # Imaginea Node.js pentru backend
-FROM node:18-slim
+FROM node:18-alpine
 
 # Setăm directorul de lucru
 WORKDIR /app
