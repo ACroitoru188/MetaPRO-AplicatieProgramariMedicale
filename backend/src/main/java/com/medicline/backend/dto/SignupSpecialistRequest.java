@@ -6,9 +6,9 @@ public class SignupSpecialistRequest {
     private String password;
     private String telefon;
     private String rol;
-    private String clinicaNume; // 🔥 înlocuiește clinicaId cu acesta
+    private String clinicaNume;
 
-    // Getters și Setters
+
     public String getUsername() { return username; }
     public void setUsername(String username) { this.username = username; }
 
@@ -21,6 +21,6 @@ public class SignupSpecialistRequest {
     public String getRol() { return rol; }
     public void setRol(String rol) { this.rol = rol; }
 
-    public String getClinicaNume() { return clinicaNume; }  // ✅ aici era problema
+    public String getClinicaNume() { return clinicaNume; }
     public void setClinicaNume(String clinicaNume) { this.clinicaNume = clinicaNume; }
 }

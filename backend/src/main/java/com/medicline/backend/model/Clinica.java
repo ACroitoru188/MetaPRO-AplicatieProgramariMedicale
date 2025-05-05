@@ -20,11 +20,11 @@ public class Clinica {
     private String email;
     private String oras;
 
-    @OneToMany(mappedBy = "clinica", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "clinica", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Specialist> specialists = new ArrayList<>();
 
-    // Getteri și setteri
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

@@ -44,4 +44,13 @@ public class AppointmentService {
     public List<Appointment> getAppointmentsBySpecialistId(Long specialistId) {
         return appointmentRepository.findBySpecialistId(specialistId);
     }
+
+    
+    public Appointment updateStatus(Long id, String newStatus) {
+        Appointment appointment = appointmentRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Programarea nu există"));
+
+        appointment.setStatus(newStatus);
+        return appointmentRepository.save(appointment);
+    }
 }

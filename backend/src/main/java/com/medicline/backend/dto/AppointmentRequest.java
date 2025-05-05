@@ -10,7 +10,7 @@ public class AppointmentRequest {
     private String tip; // "video" sau "fizic"
     private String linkVideo;
 
-    // Getters și Setters
+
     public Long getClientId() { return clientId; }
     public void setClientId(Long clientId) { this.clientId = clientId; }
 
