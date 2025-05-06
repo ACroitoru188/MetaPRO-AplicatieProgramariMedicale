@@ -45,7 +45,7 @@ public class AuthController {
         return ResponseEntity.ok(clientService.getAllClients());
     }
 
-    // ✅ Endpoint pentru testarea tokenului
+
     @GetMapping("/verify-token")
     public ResponseEntity<?> verifyToken(@RequestHeader("Authorization") String authHeader) {
         try {

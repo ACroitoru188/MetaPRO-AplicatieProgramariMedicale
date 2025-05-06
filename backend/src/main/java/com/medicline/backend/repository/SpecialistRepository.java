@@ -8,6 +8,6 @@ import java.util.List;
 public interface SpecialistRepository extends JpaRepository<Specialist, Long> {
     Specialist findByUsername(String username);
 
-    // 🔹 Lista de specialiști pentru o clinică
+
     List<Specialist> findByClinicaId(Long clinicaId);
 }

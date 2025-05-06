@@ -14,22 +14,22 @@ public class ClinicaService {
     @Autowired
     private ClinicaRepository clinicaRepository;
 
-    // Create clinic
+
     public Clinica saveClinica(Clinica clinica) {
         return clinicaRepository.save(clinica);
     }
 
-    // Read all clinics
+
     public List<Clinica> getAllClinics() {
         return clinicaRepository.findAll();
     }
 
-    // Read one clinic by ID
+
     public Optional<Clinica> getClinicaById(Long id) {
         return clinicaRepository.findById(id);
     }
 
-    // Update clinic
+
     public Clinica updateClinica(Long id, Clinica clinicaNoua) {
         Clinica clinica = clinicaRepository.findById(id).orElseThrow(() -> new RuntimeException("Clinica not found"));
         clinica.setNume(clinicaNoua.getNume());
@@ -40,7 +40,7 @@ public class ClinicaService {
         return clinicaRepository.save(clinica);
     }
 
-    // Delete clinic
+
     public void deleteClinica(Long id) {
         clinicaRepository.deleteById(id);
     }

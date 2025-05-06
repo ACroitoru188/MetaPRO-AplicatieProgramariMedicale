@@ -17,7 +17,7 @@ public class SpecialistController {
     @Autowired
     private SpecialistService specialistService;
 
-    // 🔹 Signup specialist
+
     @PostMapping("/signup")
     public ResponseEntity<?> signup(@RequestBody SignupSpecialistRequest request) {
         try {
@@ -34,7 +34,7 @@ public class SpecialistController {
         }
     }
 
-    // 🔹 Login specialist
+
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Specialist specialist) {
         Specialist authenticated = specialistService.loginSpecialist(specialist.getUsername(), specialist.getPassword());
@@ -45,7 +45,7 @@ public class SpecialistController {
         }
     }
 
-    // 🔹 Get specialist by ID
+
     @GetMapping("/{id}")
     public ResponseEntity<?> getSpecialistById(@PathVariable Long id) {
         Optional<Specialist> specialist = specialistService.getById(id);
@@ -53,13 +53,13 @@ public class SpecialistController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // 🔹 Get all specialists
+
     @GetMapping
     public ResponseEntity<List<Specialist>> getAllSpecialists() {
         return ResponseEntity.ok(specialistService.getAllSpecialists());
     }
 
-    // 🔹 Get specialists by clinic ID
+
     @GetMapping("/clinica/{clinicaId}")
     public ResponseEntity<List<Specialist>> getSpecialistsByClinicaId(@PathVariable Long clinicaId) {
         return ResponseEntity.ok(specialistService.getSpecialistsByClinicaId(clinicaId));

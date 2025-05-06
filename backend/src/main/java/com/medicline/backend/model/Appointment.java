@@ -11,22 +11,22 @@ public class Appointment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Legătură către Client
+
     @ManyToOne
     @JoinColumn(name = "client_id")
     private Client client;
 
-    // Legătură către Specialist
+
     @ManyToOne
     @JoinColumn(name = "specialist_id")
     private Specialist specialist;
 
-    private LocalDateTime dataOra; // Data și ora programării
-    private String tip; // "fizic" sau "video"
-    private String status; // "în așteptare", "confirmată", etc.
-    private String linkVideo; // opțional
+    private LocalDateTime dataOra;
+    private String tip;
+    private String status;
+    private String linkVideo;
 
-    // Getteri și setteri
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
