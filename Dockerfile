@@ -1,5 +1,4 @@
-FROM node:16-slim@sha256:2c8b7b9b8e8e8f8e8f8e8f8e8f8e8f8e8f8e8f8e8f8e8f8e8f8e8f8e8f8e8f8
-
+FROM node:18
 
 WORKDIR /app
 
