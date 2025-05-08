@@ -6,63 +6,63 @@ body {
     color: #222;
 }
 
-.clinics-container {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 1rem;
-}
-
 h1 {
     text-align: center;
     color: #003366;
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
+}
+
+.clinics-container {
+    max-width: 1200px;
+    margin: 48px auto;
+    padding: 16px;
 }
 
 .clinics-list {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 32px;
 }
 
 .clinic-card {
     display: flex;
     background-color: #fff;
-    padding: 1.5rem;
+    padding: 24px;
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     align-items: flex-start;
     justify-content: space-between;
 }
 
 .clinic-left img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 8px;
 }
 
 .clinic-middle {
     flex-grow: 1;
-    padding: 0 1.5rem;
+    padding: 0 24px;
 }
 
 .clinic-middle h2 {
     color: #0066cc;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
+}
+
+.clinic-middle p {
+    margin: 5px 0;
+    color: #8aa5bb;
 }
 
 .clinic-middle p strong {
     color: #000066;
 }
 
-.clinic-middle p {
-    margin: 0.3rem 0;
-    color: #8aa5bb;
-}
-
 .clinic-middle button {
-    margin-top: 1rem;
-    padding: 0.6rem 1.5rem;
+    margin-top: 16px;
+    padding: 10px 24px;
     background-color: #3399cc;
     color: white;
     font-weight: bold;
@@ -81,13 +81,13 @@ h1 {
 }
 
 .clinic-departments h4 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     color: #003366;
 }
 
 .clinic-departments ul {
     list-style-type: disc;
-    padding-left: 1.2rem;
+    padding-left: 19.2px;
     margin: 0;
 }
 
@@ -97,7 +97,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,45 +106,45 @@ h1 {
 
 .modal {
     background-color: #fff;
-    padding: 2rem;
+    padding: 32px;
     border-radius: 12px;
     width: 90%;
     max-width: 500px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .modal h2 {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     color: #003366;
 }
 
 .modal form label {
     font-weight: 500;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
 }
 
 .modal form select,
 .modal form input {
     width: 100%;
-    padding: 0.6rem;
+    padding: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    font-size: 16px;
+    margin-bottom: 16px;
 }
 
 .modal-buttons {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .modal-buttons button {
     flex: 1;
-    padding: 0.6rem 1rem;
-    font-size: 1rem;
+    padding: 10px 16px;
+    font-size: 16px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
@@ -175,10 +175,10 @@ h1 {
     }
 
     .clinic-middle {
-        padding: 1rem 0;
+        padding: 16px 0;
     }
 
     .clinic-departments {
-        margin-top: 1rem;
+        margin-top: 16px;
     }
 }

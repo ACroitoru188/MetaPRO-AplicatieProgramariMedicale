@@ -8,6 +8,7 @@ export default function Footer() {
             padding: "16px",
             borderTopLeftRadius: "8px",
             alignItems: "center",
+            color: "darkblue",
         }}>
             &copy; MetaPro MedicLine
         </footer>
