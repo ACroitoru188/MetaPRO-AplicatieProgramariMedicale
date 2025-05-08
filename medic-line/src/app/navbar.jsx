@@ -29,6 +29,18 @@ export default function Navbar() {
                 <li>
                     <Link href="/clinics">Clinici</Link>
                 </li>
+                <li>
+                    <Link href="/about">Despre noi</Link>
+                </li>
+                <li>
+                    <Link href="/contact">Contact</Link>
+                </li>
+                <li>
+                    <Link href="/glosar">Glosar afectiuni</Link>
+                </li>
+                <li>
+                    <Link href="/subscription">Abonamente</Link>
+                </li>
             </ul>
         </nav>
     );
