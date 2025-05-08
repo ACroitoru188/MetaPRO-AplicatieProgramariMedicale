@@ -1,6 +1,6 @@
 package com.medicline.backend.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -18,10 +18,10 @@ public class Specialist {
 
     @ManyToOne
     @JoinColumn(name = "clinica_id")
-    @JsonIgnoreProperties("specialists") // evităm bucla infinită
+    @JsonBackReference
     private Clinica clinica;
 
-    // Getteri și setteri
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

@@ -19,7 +19,7 @@ public class SpecialistService {
     @Autowired
     private ClinicaRepository clinicaRepository;
 
-    // 🔹 Înregistrare specialist cu verificare clinică
+
     public Specialist registerSpecialist(Specialist specialist, String clinicaNume) {
         Clinica clinica = clinicaRepository.findByNume(clinicaNume);
         if (clinica == null) {
@@ -30,7 +30,7 @@ public class SpecialistService {
         return specialistRepository.save(specialist);
     }
 
-    // 🔹 Autentificare simplă
+
     public Specialist loginSpecialist(String username, String password) {
         Specialist found = specialistRepository.findByUsername(username);
         if (found != null && found.getPassword().equals(password)) {
@@ -39,17 +39,17 @@ public class SpecialistService {
         return null;
     }
 
-    // 🔹 Aducere specialist după ID (inclusiv clinica)
+
     public Optional<Specialist> getById(Long id) {
         return specialistRepository.findById(id);
     }
 
-    // 🔹 Aducere toți specialiștii
+
     public List<Specialist> getAllSpecialists() {
         return specialistRepository.findAll();
     }
 
-    // 🔹 Aducere specialiști după clinica ID
+
     public List<Specialist> getSpecialistsByClinicaId(Long clinicaId) {
         return specialistRepository.findByClinicaId(clinicaId);
     }
