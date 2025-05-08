@@ -8,9 +8,9 @@ body {
 
 .formularSimptome {
     max-width: 700px;
-    margin: 3rem auto;
+    margin: 48px auto;
     background-color: #fff;
-    padding: 2rem;
+    padding: 32px;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
@@ -18,8 +18,8 @@ body {
 .formularSimptome h1 {
     text-align: center;
     color: #003366;
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    margin-bottom: 32px;
+    font-size: 32px;
 }
 
 form {
