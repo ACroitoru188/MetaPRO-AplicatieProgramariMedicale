@@ -1,0 +1,60 @@
+.page {
+    background-color: #e6f0f7;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    padding-bottom: 64px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 64px auto;
+    padding: 0 16px;
+    color: #003366;
+}
+
+.container h1 {
+    font-size: 36px;
+    color: #003366;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    text-align: center;
+}
+
+.container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.container strong {
+    color: #0066cc;
+}
+
+.doctorsSection {
+    background-color: #ffffff;
+    padding: 48px 16px;
+    text-align: center;
+}
+
+.doctorsSection h2 {
+    font-size: 28px;
+    color: #004999;
+    margin-bottom: 32px;
+}
+
+.doctorsGrid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.doctorsGrid img {
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.doctorsGrid img:hover {
+    transform: scale(1.05);
+}
