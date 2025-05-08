@@ -33,6 +33,9 @@ export default function Navbar() {
                 <li>
                     <Link href="/simptoms">Simptome</Link>
                 </li>
+                <li>
+                    <Link href="/clinics">Clinici</Link>
+                </li>
             </ul>
         </nav>
     );

@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e6f0f7;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+.formularSimptome {
+    max-width: 700px;
+    margin: 3rem auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.formularSimptome h1 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left !important;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.checkbox-label span {
+    flex-shrink: 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+    transform: scale(1.2);
+    accent-color: #0066cc;
+}
+
+.moreQuestions {
+    margin-left: 1.5rem;
+    padding: 1rem;
+    background-color: #f4f9fc;
+    border-left: 4px solid #3399cc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.moreQuestions label {
+    font-weight: 500;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+select,
+input,
+textarea {
+    padding: 0.6rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+button,
+button[type="submit"] {
+    display: block;
+    margin: 2rem auto 0;
+    padding: 0.7rem 1.5rem;
+    background-color: #0066cc;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+button[type="submit"]:hover {
+    background-color: #004999;
+}
+
+@media (max-width: 600px) {
+    .formularSimptome {
+        margin: 30px 1rem;
+        padding: 1.5rem;
+    }
+
+    .moreQuestions {
+        margin-left: 0;
+    }
+
+    select {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .checkbox-label {
+        flex-direction: row;
+        align-items: center;
+    }
+}
