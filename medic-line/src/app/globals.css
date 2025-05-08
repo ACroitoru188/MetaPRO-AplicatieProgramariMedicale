@@ -9,37 +9,37 @@ body {
   max-width: 500px;
   margin: 80px auto;
   background: white;
-  padding: 2rem;
+  padding: 32px;
   border: 1px solid lightblue;
   border-radius: 8px;
 }
 
 h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   font-size: 24px;
   color: #333;
 }
 
 form div {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 label {
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 4.8px;
   font-weight: bold;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 0.6rem;
+  padding: 9.6px;
   border: 1px solid lightblue;
   border-radius: 4px;
 }
 
 button {
-  padding: 0.6rem 1.2rem;
+  padding: 9.6px 19.2px;
   background-color: darkblue;
   color: white;
   border: none;
@@ -53,7 +53,7 @@ button:hover {
 
 .error {
   color: red;
-  font-size: 0.9rem;
+  font-size: 14.4px;
 }
 
 root {
@@ -98,4 +98,3 @@ a {
     color-scheme: dark;
   }
 }
-

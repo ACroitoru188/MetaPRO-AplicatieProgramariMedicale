@@ -8,6 +8,9 @@ export default function Home() {
         <Navbar />
         <div>
           <h1 style={{ color: "darkblue" }}>MedicLine</h1>
+            <button><Link href="/login">Log In</Link></button>
+            <button><Link href="/register-specialist">Register Specialist</Link></button>
+            <button><Link href="/register">Register</Link></button>
         </div>
       </div>
   );

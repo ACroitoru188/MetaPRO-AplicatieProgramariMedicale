@@ -24,14 +24,14 @@ export default function LoginPage() {
 
                 localStorage.setItem("token", token);
 
-                alert("Autentificare reușită!");
+                alert("Autentificare reusits!");
                 window.location.href = "/dashboard";
             } else {
                 const errorMsg = await response.text();
                 alert("Eroare la autentificare: " + errorMsg);
             }
         } catch (error) {
-            alert("Eroare rețea: " + error.message);
+            alert("Eroare retea: " + error.message);
         }
     };
 
@@ -46,7 +46,7 @@ export default function LoginPage() {
                 </div>
 
                 <div>
-                    <label>Parolă</label>
+                    <label>Parola</label>
                     <input
                         type="password"
                         {...register("password", { required: "Parola este obligatorie" })}

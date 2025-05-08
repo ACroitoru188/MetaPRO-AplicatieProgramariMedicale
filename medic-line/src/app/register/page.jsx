@@ -25,14 +25,14 @@ export default function RegisterPage() {
             });
 
             if (response.ok) {
-                alert("Cont creat cu succes! Mergi la autentificare.");
+                alert("Cont creat cu succes!");
                 window.location.href = "/login";
             } else {
                 const errorMsg = await response.text();
-                alert("Eroare la înregistrare: " + errorMsg);
+                alert("Eroare la inregistrare: " + errorMsg);
             }
         } catch (error) {
-            alert("Eroare rețea: " + error.message);
+            alert("Eroare retea: " + error.message);
         }
     };
 
@@ -63,7 +63,7 @@ export default function RegisterPage() {
                             required: "Parola este obligatorie",
                             minLength: {
                                 value: 6,
-                                message: "Parola trebuie să aibă cel puțin 6 caractere",
+                                message: "Parola trebuie sa aiba cel putin 6 caractere",
                             },
                         })}
                     />
@@ -75,7 +75,7 @@ export default function RegisterPage() {
                     <input
                         type="password"
                         {...register("confirmPassword", {
-                            required: "Confirmarea este obligatorie",
+                            required: "Parola trebuie reintrodusa!",
                             validate: (value) =>
                                 value === watch("password") || "Parolele nu coincid",
                         })}
@@ -85,7 +85,7 @@ export default function RegisterPage() {
                     )}
                 </div>
 
-                <button type="submit">Înregistrează-te</button>
+                <button type="submit">Inregistreaza-te</button>
             </form>
         </div>
     );

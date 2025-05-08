@@ -2,6 +2,8 @@
 import { useForm } from "react-hook-form";
 import "./styles.css";
 import {useState} from "react";
+import Navbar from "@/app/navbar";
+import Footer from "@/app/footer";
 
 export default function SimptomsPage() {
     const [dureriCap, setDureriCap] = useState(false);
@@ -19,6 +21,7 @@ export default function SimptomsPage() {
     };
     return (
         <div className="formularSimptome">
+            <Navbar />
             <h1>Formular de simptome</h1>
             <form onSubmit={handleSubmit}>
                 <label className="checkbox-label">
@@ -162,6 +165,7 @@ export default function SimptomsPage() {
 
                 <button type="submit">Trimite</button>
             </form>
+            <Footer />
         </div>
     )
 }

@@ -39,7 +39,7 @@ export default function RegisterSpecialist() {
                     <textarea rows="3" {...register("description")} />
                 </div>
 
-                <button type="submit">Inregsitreaza</button>
+                <button type="submit">Inregsitreaza-te</button>
             </form>
         </div>
     );
